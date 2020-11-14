@@ -10,8 +10,10 @@
   
 ## things left to implement
 
-* The code to mine bitcoin from the user's pc while the game is running
-* UI
-* the actual diferent stuff each non player orbiter object does
-  * the player is ready to check for this stuff, providing the forward checker works
- 
+* The removal of player lives (and the loss screen)
+* UI for the progress of the game (alien getting to planet)
+* Check every images that may have been lost in the seamless transition
+* Background for the game
+* Main Menu
+* Obstacles having customizable lenghts, avoiding pile-up of obstacles
+* Garanteing that there are no elements in outer orbit except for player
