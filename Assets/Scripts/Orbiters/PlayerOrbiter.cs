@@ -9,8 +9,10 @@ public class PlayerOrbiter : OrbiterBase
     public int life;
 
     public float orbitJumpCooldown = 0.5f;
+    public float dirFlipCooldown = 0.2f;
 
     public float orbitCooldownCounter;
+    public float flipCooldownCounter;
 
     public GameObject forwardChecker;
 
@@ -53,11 +55,12 @@ public class PlayerOrbiter : OrbiterBase
     void Update()
     {
         orbitCooldownCounter += Time.deltaTime;
+        flipCooldownCounter += Time.deltaTime;
 
         if (!blockMovement)
             transform.RotateAround(Vector3.zero, Vector3.forward, currSpeed * Time.deltaTime);
 
-        if (Input.GetKeyDown(changeDirectionKey))
+        if (Input.GetKeyDown(changeDirectionKey) &&  flipCooldownCounter > dirFlipCooldown)
         {
             print($"START Current speed: {currSpeed} -- Orbit Speed: {orbitSpeed}");
 
@@ -73,6 +76,8 @@ public class PlayerOrbiter : OrbiterBase
                 currSpeed *= -1;
                 orbitSpeed *= -1;
             }
+            flipCooldownCounter = 0;
+
 
             print($"END Current speed: {currSpeed} -- Orbit Speed: {orbitSpeed}");
         }
