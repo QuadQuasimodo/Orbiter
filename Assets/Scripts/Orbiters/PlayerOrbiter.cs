@@ -8,8 +8,6 @@ public class PlayerOrbiter : OrbiterBase
     public int maxLife = 3;
     public int life;
 
-    public float orbitJumpCooldown = 0.5f;
-    public float dirFlipCooldown = 0.2f;
 
     public float orbitCooldownCounter;
     public float flipCooldownCounter;
@@ -19,10 +17,11 @@ public class PlayerOrbiter : OrbiterBase
     [HideInInspector]
     public OrbitCheckerScript forwardOrbiter;
 
-    public KeyCode orbitJumpKey;
-    public KeyCode changeDirectionKey;
+    private KeyCode orbitJumpKey => settings.OrbitKey;
+    private KeyCode changeDirectionKey => settings.DirectionKey;
 
     public float currSpeed;
+    new float orbitSpeed;
 
     [SerializeField] private bool isImmortal = true;
 
@@ -31,6 +30,8 @@ public class PlayerOrbiter : OrbiterBase
     [SerializeField]
         private BumperScript rightBumper;
 
+    [SerializeField]
+    private GameSettingsHolder settings;
     private LivesManager livesManager;
 
     // Start is called before the first frame update
@@ -43,6 +44,7 @@ public class PlayerOrbiter : OrbiterBase
 
         leftBumper.myOrbiter = this;
         rightBumper.myOrbiter = this;
+        orbitSpeed = settings.PlayerSpeed;
         currSpeed = orbitSpeed;
         life = maxLife;
         isImmortal = false;
@@ -60,7 +62,7 @@ public class PlayerOrbiter : OrbiterBase
         if (!blockMovement)
             transform.RotateAround(Vector3.zero, Vector3.forward, currSpeed * Time.deltaTime);
 
-        if (Input.GetKeyDown(changeDirectionKey) &&  flipCooldownCounter > dirFlipCooldown)
+        if (Input.GetKeyDown(changeDirectionKey) )
         {
             print($"START Current speed: {currSpeed} -- Orbit Speed: {orbitSpeed}");
 
@@ -82,7 +84,7 @@ public class PlayerOrbiter : OrbiterBase
             print($"END Current speed: {currSpeed} -- Orbit Speed: {orbitSpeed}");
         }
         
-        if (Input.GetKeyDown(orbitJumpKey) && orbitCooldownCounter > orbitJumpCooldown)
+        if (Input.GetKeyDown(orbitJumpKey) )
         {
             // allow jump if on last orbit no matter what since everything is so tight together there.
             if (!(forwardOrbiter.isObstructed && currentOrbit != 1))

@@ -176,17 +176,16 @@ MonoBehaviour:
   orbitSpeed: -50
   maxLife: 3
   life: 3
-  orbitJumpCooldown: 0.35
   orbitCooldownCounter: 0
+  flipCooldownCounter: 0
   forwardChecker: {fileID: 9105500103904293230, guid: 98e277ff62b5ae942a9b9fcc6dc8b1d4,
     type: 3}
   forwardOrbiter: {fileID: 0}
-  orbitJumpKey: 120
-  changeDirectionKey: 122
   currSpeed: 2.16
   isImmortal: 1
   leftBumper: {fileID: 1687361942886651991}
   rightBumper: {fileID: 7932872113632618873}
+  settings: {fileID: 11400000, guid: 28478d2971a9bec4ba849dc00e035a5a, type: 2}
 --- !u!58 &6156645806934777655
 CircleCollider2D:
   m_ObjectHideFlags: 0

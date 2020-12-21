@@ -18,7 +18,7 @@ public class PlanetoidOrbiter : OrbiterBase
         if (usePlayerSpeed)
         {
             player = GameObject.FindObjectOfType<PlayerOrbiter>();
-            orbitSpeed = player.orbitSpeed;
+            orbitSpeed = GameStarter.Instance.currentSettings.PlayerSpeed;
             orbitSpeed *= playerSpeedModifier;
 
         }

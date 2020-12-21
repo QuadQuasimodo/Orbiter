@@ -9,7 +9,7 @@ public class GameSettingsHolder : ScriptableObject
     [Range(0, 400)]
     private float playerSpeed;
 
-    public float PlayerSpeed {get => clockWise ? -playerSpeed : playerSpeed;}
+    public float PlayerSpeed { get => clockWise ? -playerSpeed : playerSpeed;}
 
     public bool clockWise = true;
 
@@ -22,9 +22,29 @@ public class GameSettingsHolder : ScriptableObject
     public KeyCode OrbitKey {get => FlipControls ? flipKey : orbitKey;}
 
     public KeyCode RedKey {get => FlipControls ? OrbitKey : DirectionKey;}
-    public KeyCode BlueKey {get => FlipControls ? OrbitKey : DirectionKey;}
+    public KeyCode BlueKey {get => FlipControls ? DirectionKey : OrbitKey;}
 
     public bool FlipControls = false;
+
+    public void ChangePlayerSpeed(float additionalSpeed)
+    {
+        float s = playerSpeed + additionalSpeed;
+
+        s = Mathf.Clamp(s, 0, 100);
+
+        playerSpeed = s;
+    }
+
+    public void MatchSettings(GameSettingsHolder g)
+    {
+        flipKey = g.flipKey;
+        orbitKey = g.orbitKey;
+        playerSpeed = g.playerSpeed;
+        orbiterSpeedModifier = g.orbiterSpeedModifier;
+        clockWise = g.clockWise;
+        FlipControls = g.FlipControls;
+
+    }
 
     /// <summary>
     /// Blue is X
