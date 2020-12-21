@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(SpriteRenderer))]
 public class ButtonGraphic : MonoBehaviour
@@ -9,6 +10,7 @@ public class ButtonGraphic : MonoBehaviour
     public Sprite pressBtn;
 
     private SpriteRenderer sprRend;
+    public Text functionText;
 
     public bool redBtn;
 
@@ -25,6 +27,12 @@ public class ButtonGraphic : MonoBehaviour
                 sprRend.sprite = pressBtn;
             else
                 sprRend.sprite = normalBtn;
+
+            if (GameStarter.Instance.currentSettings.RedKey == GameStarter.Instance.currentSettings.DirectionKey)
+                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Switch Directions";
+            else
+                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Jump Orbits";
+
         }
         else if (!redBtn)
         {
@@ -32,6 +40,11 @@ public class ButtonGraphic : MonoBehaviour
                 sprRend.sprite = pressBtn;
             else
                 sprRend.sprite = normalBtn;
+
+            if (GameStarter.Instance.currentSettings.BlueKey == GameStarter.Instance.currentSettings.DirectionKey)
+                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Switch Directions";
+            else
+                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Jump Orbits";
         }
     }
 }

@@ -15,4 +15,4 @@ MonoBehaviour:
   playerSpeed: 50
   clockWise: 1
   orbiterSpeedModifier: 0
-  FlipControls: 1
+  FlipControls: 0
