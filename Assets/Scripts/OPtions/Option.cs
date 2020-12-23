@@ -23,13 +23,13 @@ public class Option : MonoBehaviour
         }
         dampCount += Time.deltaTime;
 
-        if (Input.GetKeyUp(currentSettings.BlueKey) && dampCount > inputDamp)
+        if ((Input.GetKeyUp(currentSettings.BlueKey) || Input.GetKeyUp(KeyCode.RightArrow)) && dampCount > inputDamp)
         {
             HandleBlue();
             
         }
 
-        if (Input.GetKeyUp(currentSettings.RedKey) && dampCount > inputDamp)
+        if ((Input.GetKeyUp(currentSettings.RedKey) || Input.GetKeyUp(KeyCode.LeftArrow)) && dampCount > inputDamp)
         {
             
             HandleRed();
@@ -37,7 +37,7 @@ public class Option : MonoBehaviour
         }
 
 
-        if (Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey) && dampCount > inputDamp)
+        if ((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || (Input.GetKeyDown(KeyCode.Return)) && dampCount > inputDamp)
         {
             dampCount = 0;
             active = false;

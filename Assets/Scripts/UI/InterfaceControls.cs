@@ -36,7 +36,7 @@ public class InterfaceControls : MonoBehaviour
         dampCount += Time.deltaTime;
         //print(_selectedOpt);
         // Blue Down the Menu
-        if (Input.GetKeyUp(currentSettings.BlueKey) && dampCount > inputDamp)
+        if ((Input.GetKeyUp(currentSettings.BlueKey) || Input.GetKeyDown(KeyCode.DownArrow)) && dampCount > inputDamp)
         {
             print("ble");
             index++;
@@ -45,7 +45,7 @@ public class InterfaceControls : MonoBehaviour
         }
 
         // Red goes up the Menu
-        if (Input.GetKeyUp(currentSettings.RedKey) && dampCount > inputDamp)
+        if ((Input.GetKeyUp(currentSettings.RedKey) || Input.GetKeyDown(KeyCode.UpArrow)) && dampCount > inputDamp)
         {
             print("red");
             index--;
@@ -58,7 +58,7 @@ public class InterfaceControls : MonoBehaviour
 
 
 
-        if (Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey) && dampCount > inputDamp)
+        if (((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || Input.GetKeyDown(KeyCode.Return)) && dampCount > inputDamp)
         {
             print("Enter Option");
             
