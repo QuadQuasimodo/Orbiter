@@ -8,6 +8,7 @@ public class LevelScript : MonoBehaviour
     
     public float orbitDistance = 100;
     public const int orbits = 4;
+    public int currentStangeNumber => currentStage;
 
     private SliderController sliderController;
 
@@ -39,10 +40,9 @@ public class LevelScript : MonoBehaviour
             sliderController.ProgressSliderUpdate(currentStage - 1);
         }
         else
-            // Doesnt work for some reason
             SceneManager.LoadScene("VictoryScene");
     }
-                                // Same problem as above
+                                
     public void LoseStage() => SceneManager.LoadScene("DefeatScene");
         
 

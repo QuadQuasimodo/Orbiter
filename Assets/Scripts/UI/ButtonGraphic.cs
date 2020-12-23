@@ -29,9 +29,9 @@ public class ButtonGraphic : MonoBehaviour
                 sprRend.sprite = normalBtn;
 
             if (GameStarter.Instance.currentSettings.RedKey == GameStarter.Instance.currentSettings.DirectionKey)
-                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Switch Directions";
+                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Trocar Direcção";
             else
-                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Jump Orbits";
+                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Avançar Orbita";
 
         }
         else if (!redBtn)
@@ -42,9 +42,9 @@ public class ButtonGraphic : MonoBehaviour
                 sprRend.sprite = normalBtn;
 
             if (GameStarter.Instance.currentSettings.BlueKey == GameStarter.Instance.currentSettings.DirectionKey)
-                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Switch Directions";
+                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Trocar Direcção";
             else
-                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Jump Orbits";
+                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Avançar Orbita";
         }
     }
 }

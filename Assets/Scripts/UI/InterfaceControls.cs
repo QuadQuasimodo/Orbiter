@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class InterfaceControls : MonoBehaviour
 {
-    private float inputDamp = 0.5f;
+    private float inputDamp = 0.4f;
     private float dampCount = 0;
 
     public GameSettingsHolder defaultSettings;
@@ -35,19 +35,21 @@ public class InterfaceControls : MonoBehaviour
             
         dampCount += Time.deltaTime;
         //print(_selectedOpt);
-        // Blue goes up
-        if (Input.GetKeyUp(currentSettings.BlueKey))
+        // Blue Down the Menu
+        if (Input.GetKeyUp(currentSettings.BlueKey) && dampCount > inputDamp)
         {
             print("ble");
-            index--;
+            index++;
+      
 
         }
 
-        // Red goes down
-        if (Input.GetKeyUp(currentSettings.RedKey))
+        // Red goes up the Menu
+        if (Input.GetKeyUp(currentSettings.RedKey) && dampCount > inputDamp)
         {
             print("red");
-            index++;
+            index--;
+           
 
         }
 
@@ -62,6 +64,7 @@ public class InterfaceControls : MonoBehaviour
             
             _selectedOpt.active = true;
             _selectedOpt.OnActive();
+            dampCount = 0;
            
 
         }

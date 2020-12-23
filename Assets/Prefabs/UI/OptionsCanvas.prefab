@@ -176,7 +176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Flip Controls
+  m_Text: Espelhar Controlos
 --- !u!1 &6237939799267961590
 GameObject:
   m_ObjectHideFlags: 0
@@ -537,7 +537,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player Direction
+  m_Text: "Direc\xE7\xE3o do Jogador"
 --- !u!1 &6237939799745608254
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +691,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Reset to Default Settings
+  m_Text: "Repor Defini\xE7\xF5es Iniciais"
 --- !u!1 &6237939799777801126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1033,7 +1033,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Return to Start
+  m_Text: Voltar ao Inicio
 --- !u!1 &6237939800173628332
 GameObject:
   m_ObjectHideFlags: 0
@@ -1437,7 +1437,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Player Speed
+  m_Text: Velocidade do Jogador
 --- !u!1 &6237939800524300315
 GameObject:
   m_ObjectHideFlags: 0

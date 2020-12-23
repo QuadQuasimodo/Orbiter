@@ -156,7 +156,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 222.4, y: -59.6}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 178.26, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &507065311
 MonoBehaviour:
@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Start Game
+  m_Text: "Come\xE7ar Jogo"
 --- !u!222 &507065312
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -681,9 +681,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Settings
-
-'
+  m_Text: "Defini\xE7\xF5es\n"
 --- !u!222 &1220854420
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1012,7 +1010,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4854136853374687046, guid: 0e9083b10acf24a448e0bde7f87a9a41,
+  m_Sprite: {fileID: -1840198808304792795, guid: 322917d7bc499824b91be14c5b38e796,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

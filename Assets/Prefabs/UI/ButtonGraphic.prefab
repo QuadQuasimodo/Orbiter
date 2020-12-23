@@ -123,7 +123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e2d16861466e548ae9a116d937c6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalBtn: {fileID: 21300000, guid: 6f19a59dcd5ae7946bdccbfce2dc2a47, type: 3}
+  normalBtn: {fileID: 21300000, guid: 90070defe9b6aed409a8c2da464224c9, type: 3}
   pressBtn: {fileID: 21300000, guid: 6cfd9bfc07f1c844f9099f0050354fa1, type: 3}
   functionText: {fileID: 8637239387094143849}
   redBtn: 1
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10e2d16861466e548ae9a116d937c6a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  normalBtn: {fileID: 21300000, guid: dee1ec49baa65b240a9cedaa1ff9dfbf, type: 3}
+  normalBtn: {fileID: 21300000, guid: f965e8ba0f72a2b4b9690e31e631464a, type: 3}
   pressBtn: {fileID: 21300000, guid: 19f846eceabc8154b8bf4aa17e1a4276, type: 3}
   functionText: {fileID: 412959404117370378}
   redBtn: 0

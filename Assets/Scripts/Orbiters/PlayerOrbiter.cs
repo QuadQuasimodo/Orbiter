@@ -47,7 +47,6 @@ public class PlayerOrbiter : OrbiterBase
         orbitSpeed = settings.PlayerSpeed;
         currSpeed = orbitSpeed;
         life = maxLife;
-        isImmortal = false;
         orbitCooldownCounter = 0;
         GameObject instantiated = Instantiate(forwardChecker, transform.position + transform.up * LevelScript.levelInstance.orbitDistance, transform.rotation,this.transform);
         forwardOrbiter = instantiated.GetComponent<OrbitCheckerScript>();
@@ -112,8 +111,13 @@ public class PlayerOrbiter : OrbiterBase
         if (other.GetType() == typeof(PlanetoidOrbiter) ||
             other.GetType() == typeof(EnemyOrbitrer))
         {
-            life--;
-            livesManager.DisableLife(maxLife - life - 1);
+            if (!isImmortal)
+            {
+                life--;
+                livesManager.DisableLife(maxLife - life - 1);
+            }
+                
+            
 
             Setup();
         }
