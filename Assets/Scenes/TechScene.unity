@@ -128,6 +128,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6237939799144374023, guid: d097b3c5718e8704288007092bdf12bf,
+        type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6237939799144374025, guid: d097b3c5718e8704288007092bdf12bf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -291,12 +296,12 @@ PrefabInstance:
     - target: {fileID: 6237939800147282351, guid: d097b3c5718e8704288007092bdf12bf,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 398.4
+      value: 461.63
       objectReference: {fileID: 0}
     - target: {fileID: 6237939800147282351, guid: d097b3c5718e8704288007092bdf12bf,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -164.6
+      value: -208
       objectReference: {fileID: 0}
     - target: {fileID: 6237939800147282352, guid: d097b3c5718e8704288007092bdf12bf,
         type: 3}
