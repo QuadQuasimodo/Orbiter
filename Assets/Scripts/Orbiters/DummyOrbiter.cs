@@ -8,6 +8,6 @@ public class DummyOrbiter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(center.position, Vector3.forward, GameStarter.Instance.currentSettings.PlayerSpeed * Time.deltaTime);
+        transform.RotateAround(center.position, Vector3.forward, GameStarter.Instance.currentSettings.PlayerSpeed * Time.deltaTime * 1.2f);
     }
 }
