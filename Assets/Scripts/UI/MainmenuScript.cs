@@ -18,7 +18,7 @@ public class MainmenuScript : MonoBehaviour
         if (Input.GetKeyUp(GameStarter.Instance.currentSettings.BlueKey) )
         {
             print("BLUE");
-           
+           SceneManager.LoadScene("MainGame");
          
         }
         if (Input.GetKeyUp(GameStarter.Instance.currentSettings.RedKey) )
