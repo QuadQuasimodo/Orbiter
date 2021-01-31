@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class MainmenuScript : MonoBehaviour
 {
-    private float inputDamp = 40f;
+    private float inputDamp = 1f;
     private float dampCount = 0;
 
-    // Update is called once per frame
+    public GameObject techSheet;
+
+
     void Update()
     {
         dampCount++;
@@ -16,7 +18,15 @@ public class MainmenuScript : MonoBehaviour
         if (Input.GetKeyUp(GameStarter.Instance.currentSettings.BlueKey) )
         {
             print("BLUE");
-           SceneManager.LoadScene("MainGame");
+           
+         
+        }
+        if (Input.GetKeyUp(GameStarter.Instance.currentSettings.RedKey) )
+        {
+            print("RED");
+            SceneManager.LoadScene("TechScene");
+
+           
          
         }
        /* if (Input.GetKeyUp(GameStarter.Instance.currentSettings.RedKey) && dampCount > inputDamp)
