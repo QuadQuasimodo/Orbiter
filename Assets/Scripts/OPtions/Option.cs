@@ -9,7 +9,7 @@ public class Option : MonoBehaviour
     public GameSettingsHolder currentSettings;
     public Text displaytext;
 
-    protected float inputDamp = 0.2f;
+    protected float inputDamp = 0.4f;
     private float dampCount = 0;
 
     private void Update()
@@ -22,7 +22,7 @@ public class Option : MonoBehaviour
             return;
         }
         dampCount += Time.deltaTime;
-
+        print(dampCount);
         if ((Input.GetKeyUp(currentSettings.BlueKey) || Input.GetKeyUp(KeyCode.RightArrow)) && dampCount > inputDamp)
         {
             HandleBlue();
@@ -37,9 +37,9 @@ public class Option : MonoBehaviour
         }
 
 
-        if ((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || (Input.GetKeyDown(KeyCode.Return)) && dampCount > inputDamp)
+        if (((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || (Input.GetKeyDown(KeyCode.Return))) && dampCount > inputDamp)
         {
-            dampCount = 0;
+            
             active = false;
         }
                 
