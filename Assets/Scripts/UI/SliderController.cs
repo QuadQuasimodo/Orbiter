@@ -11,6 +11,7 @@ public class SliderController : MonoBehaviour
     {
         //slider = new Slider();
         progressSlider = GetComponent<Slider>();
+        progressSlider.maxValue = LevelScript.levelInstance.Stages.Count;
     }
 
     public void ProgressSliderUpdate(int level)

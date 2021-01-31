@@ -1065,6 +1065,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: -1
       objectReference: {fileID: 0}
+    - target: {fileID: 19421835762755074, guid: 183a785dc9033d142a160f042a8da149,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.83
+      objectReference: {fileID: 0}
     - target: {fileID: 132841064054749494, guid: 183a785dc9033d142a160f042a8da149,
         type: 3}
       propertyPath: m_SortingOrder
@@ -1073,7 +1078,7 @@ PrefabInstance:
     - target: {fileID: 3035399727401691381, guid: 183a785dc9033d142a160f042a8da149,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.703
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3035399727401691381, guid: 183a785dc9033d142a160f042a8da149,
         type: 3}
