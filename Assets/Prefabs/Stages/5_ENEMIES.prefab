@@ -392,6 +392,11 @@ PrefabInstance:
       propertyPath: startPosition
       value: 180
       objectReference: {fileID: 0}
+    - target: {fileID: 3719388402002163057, guid: 82370ac3ff88c0b4689a90f7810c0095,
+        type: 3}
+      propertyPath: playerSpeedMultiplier
+      value: 0.9
+      objectReference: {fileID: 0}
     - target: {fileID: 8861440555794760903, guid: 82370ac3ff88c0b4689a90f7810c0095,
         type: 3}
       propertyPath: m_Name
