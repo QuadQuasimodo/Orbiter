@@ -8,7 +8,6 @@ public class MainmenuScript : MonoBehaviour
     private float inputDamp = 1f;
     private float dampCount = 0;
 
-    public GameObject techSheet;
 
 
     void Update()

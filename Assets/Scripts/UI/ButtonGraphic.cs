@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(SpriteRenderer))]
+[RequireComponent(typeof(Image))]
 public class ButtonGraphic : MonoBehaviour
 {
     public Sprite normalBtn;
     public Sprite pressBtn;
 
     private SpriteRenderer sprRend;
+    public Image image;
     public Text functionText;
 
     public bool redBtn;
@@ -17,6 +18,7 @@ public class ButtonGraphic : MonoBehaviour
     private void Awake()
     {
         sprRend = GetComponent<SpriteRenderer>();
+        //image = GetComponent<Image>();
     }
     // Update is called once per frame
     void Update()
@@ -24,27 +26,27 @@ public class ButtonGraphic : MonoBehaviour
         if (redBtn)
         {
             if (Input.GetKey(GameStarter.Instance.currentSettings.RedKey))
-                sprRend.sprite = pressBtn;
+                image.sprite = pressBtn;
             else
-                sprRend.sprite = normalBtn;
+                image.sprite = normalBtn;
 
             if (GameStarter.Instance.currentSettings.RedKey == GameStarter.Instance.currentSettings.DirectionKey)
-                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Trocar Direcção";
+                functionText.text = $"trocar direcção";
             else
-                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Avançar Orbita";
+                functionText.text = $"avançar orbita";
 
         }
         else if (!redBtn)
         {
             if (Input.GetKey(GameStarter.Instance.currentSettings.BlueKey))
-                sprRend.sprite = pressBtn;
+                image.sprite = pressBtn;
             else
-                sprRend.sprite = normalBtn;
+                image.sprite = normalBtn;
 
             if (GameStarter.Instance.currentSettings.BlueKey == GameStarter.Instance.currentSettings.DirectionKey)
-                functionText.text = $"[{GameStarter.Instance.currentSettings.DirectionKey}] Trocar Direcção";
+                functionText.text = $"trocar direcção";
             else
-                functionText.text = $"[{GameStarter.Instance.currentSettings.OrbitKey}] Avançar Orbita";
+                functionText.text = $"avançar orbita";
         }
     }
 }
