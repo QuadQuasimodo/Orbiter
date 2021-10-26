@@ -29,15 +29,16 @@ public class Option : MonoBehaviour
             
         }
 
-        if ((Input.GetKeyUp(currentSettings.RedKey) || Input.GetKeyUp(KeyCode.LeftArrow)) && dampCount > inputDamp)
+        /*if ((Input.GetKeyUp(currentSettings.RedKey) || Input.GetKeyUp(KeyCode.LeftArrow)) && dampCount > inputDamp)
         {
             
             HandleRed();
 
-        }
+        }*/
 
 
-        if (((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || (Input.GetKeyDown(KeyCode.Return))) && dampCount > inputDamp)
+        //if (((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || (Input.GetKeyDown(KeyCode.Return))) && dampCount > inputDamp)
+        if(Input.GetKeyUp(currentSettings.RedKey) && dampCount > inputDamp ) //Red leaves option
         {
             
             active = false;
@@ -51,5 +52,7 @@ public class Option : MonoBehaviour
 
     public virtual void OnActive() { }
     public virtual void HandleBlue() { }
+
+    // This is never called now with the if above commented out
     public virtual void HandleRed() { }
 }

@@ -6,7 +6,7 @@ public class ClockwiseOPtion : Option
 {
     public override void HandleBlue()
     {
-        currentSettings.clockWise = true;
+        currentSettings.clockWise = !currentSettings.clockWise;
     }
 
     public override void HandleRed()

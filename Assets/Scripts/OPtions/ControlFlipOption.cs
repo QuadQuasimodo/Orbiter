@@ -6,7 +6,7 @@ public class ControlFlipOption : Option
 {
     public override void HandleBlue()
     {
-        currentSettings.FlipControls = true;
+        currentSettings.FlipControls = !currentSettings.FlipControls;
     }
 
     public override void HandleRed()

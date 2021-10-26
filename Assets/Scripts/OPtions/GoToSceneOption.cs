@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 using NaughtyAttributes;
 
 
-public class ReturnToStartOption : Option
+public class GoToSceneOption : Option
 {
     [Scene]
     public string targetScene;
     public override void OnActive()
     {
-        SceneManager.LoadScene("StartScene");
+        SceneManager.LoadScene(targetScene);
         
     }
 }

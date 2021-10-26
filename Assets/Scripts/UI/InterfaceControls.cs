@@ -40,25 +40,29 @@ public class InterfaceControls : MonoBehaviour
         {
             print("ble");
             index++;
-      
+
+            if(index >= options.Count)
+                index = 0;
+            
 
         }
 
         // Red goes up the Menu
-        if ((Input.GetKeyUp(currentSettings.RedKey) || Input.GetKeyDown(KeyCode.UpArrow)) && dampCount > inputDamp)
+        /*if ((Input.GetKeyUp(currentSettings.RedKey) || Input.GetKeyDown(KeyCode.UpArrow)) && dampCount > inputDamp)
         {
             print("red");
             index--;
            
 
-        }
+        }*/
 
 
         index = Mathf.Clamp(index, 0, options.Count - 1);
 
 
 
-        if (((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || Input.GetKeyDown(KeyCode.Return)) && dampCount > inputDamp)
+        //if (((Input.GetKey(currentSettings.RedKey) && Input.GetKey(currentSettings.BlueKey)) || Input.GetKeyDown(KeyCode.Return)) && dampCount > inputDamp)
+        if(Input.GetKeyUp(currentSettings.RedKey) && dampCount > inputDamp) //Red enters option
         {
             print("Enter Option");
             
