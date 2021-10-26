@@ -6,13 +6,14 @@ public class SpeedOption : Option
 {
     public override void HandleBlue()
     {
-        print("Increase Speed");
-        if(currentSettings.PlayerSpeed >= 100)
+        
+        if(Mathf.Abs(currentSettings.PlayerSpeed) >= 100)
         {
             currentSettings.ChangePlayerSpeed(-100);
             return;
         }
         currentSettings.ChangePlayerSpeed(25);
+        print(currentSettings.PlayerSpeed);
 
     }
 

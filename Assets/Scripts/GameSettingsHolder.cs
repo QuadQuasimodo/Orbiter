@@ -30,7 +30,7 @@ public class GameSettingsHolder : ScriptableObject
     {
         float s = playerSpeed + additionalSpeed;
 
-        s = Mathf.Clamp(s, 0, 100);
+        s = Mathf.Clamp(s, -1, 100);
 
         playerSpeed = s;
     }

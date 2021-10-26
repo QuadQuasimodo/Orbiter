@@ -22,7 +22,7 @@ public class Option : MonoBehaviour
             return;
         }
         dampCount += Time.deltaTime;
-        print(dampCount);
+//        print(dampCount);
         if ((Input.GetKeyUp(currentSettings.BlueKey) || Input.GetKeyUp(KeyCode.RightArrow)) && dampCount > inputDamp)
         {
             HandleBlue();

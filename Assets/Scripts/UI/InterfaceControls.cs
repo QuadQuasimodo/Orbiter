@@ -38,12 +38,12 @@ public class InterfaceControls : MonoBehaviour
         // Blue Down the Menu
         if ((Input.GetKeyUp(currentSettings.BlueKey) || Input.GetKeyDown(KeyCode.DownArrow)) && dampCount > inputDamp)
         {
-            print("ble");
+            
             index++;
 
             if(index >= options.Count)
                 index = 0;
-            
+            print(index);
 
         }
 
@@ -57,7 +57,7 @@ public class InterfaceControls : MonoBehaviour
         }*/
 
 
-        index = Mathf.Clamp(index, 0, options.Count - 1);
+       // index = Mathf.Clamp(index, 0, options.Count - 1);
 
 
 
