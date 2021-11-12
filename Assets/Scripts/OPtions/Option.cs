@@ -25,6 +25,7 @@ public class Option : MonoBehaviour
 //        print(dampCount);
         if ((Input.GetKeyUp(currentSettings.BlueKey) || Input.GetKeyUp(KeyCode.RightArrow)) && dampCount > inputDamp)
         {
+            print("Handling blue");
             HandleBlue();
             
         }
@@ -54,5 +55,5 @@ public class Option : MonoBehaviour
     public virtual void HandleBlue() { }
 
     // This is never called now with the if above commented out
-    public virtual void HandleRed() { }
+    //public virtual void HandleRed() { }
 }

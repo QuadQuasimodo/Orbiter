@@ -9,9 +9,9 @@ public class ControlFlipOption : Option
         currentSettings.FlipControls = !currentSettings.FlipControls;
     }
 
-    public override void HandleRed()
+    /*public override void HandleRed()
     {
         currentSettings.FlipControls = false;
-    }
+    }*/
 
 }

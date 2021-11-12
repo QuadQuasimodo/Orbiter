@@ -9,8 +9,8 @@ public class ClockwiseOPtion : Option
         currentSettings.clockWise = !currentSettings.clockWise;
     }
 
-    public override void HandleRed()
+    /*public override void HandleRed()
     {
         currentSettings.clockWise = false;
-    }
+    }*/
 }

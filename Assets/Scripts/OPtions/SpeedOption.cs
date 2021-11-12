@@ -9,7 +9,7 @@ public class SpeedOption : Option
         
         if(Mathf.Abs(currentSettings.PlayerSpeed) >= 100)
         {
-            currentSettings.ChangePlayerSpeed(-100);
+            currentSettings.ChangePlayerSpeed(-Mathf.Abs(currentSettings.PlayerSpeed));
             return;
         }
         currentSettings.ChangePlayerSpeed(25);
@@ -17,9 +17,9 @@ public class SpeedOption : Option
 
     }
 
-    public override void HandleRed()
+    /*public override void HandleRed()
     {
         print("Decrease Speed");
         currentSettings.ChangePlayerSpeed(-1);
-    }
+    }*/
 }

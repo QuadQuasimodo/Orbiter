@@ -35,6 +35,13 @@ public class GameSettingsHolder : ScriptableObject
         playerSpeed = s;
     }
 
+    public void SetPlayerSpeed(float newSpeed)
+    {
+        
+
+        playerSpeed = newSpeed;
+    }
+
     public void MatchSettings(GameSettingsHolder g)
     {
         flipKey = g.flipKey;
