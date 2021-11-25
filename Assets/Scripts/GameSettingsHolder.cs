@@ -24,7 +24,7 @@ public class GameSettingsHolder : ScriptableObject
     public KeyCode RedKey {get => FlipControls ? OrbitKey : DirectionKey;}
     public KeyCode BlueKey {get => FlipControls ? DirectionKey : OrbitKey;}
 
-    public bool FlipControls = false;
+    public bool FlipControls = true;
 
     public void ChangePlayerSpeed(float additionalSpeed)
     {

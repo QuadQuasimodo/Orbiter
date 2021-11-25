@@ -4,13 +4,19 @@ using UnityEngine;
 
 public class ClockwiseOPtion : Option
 {
-    public override void HandleBlue()
+    /*public override void HandleBlue()
     {
-        currentSettings.clockWise = !currentSettings.clockWise;
-    }
+        
+    }*/
 
     /*public override void HandleRed()
     {
         currentSettings.clockWise = false;
     }*/
+
+    public override void OnActive()
+    {
+        currentSettings.clockWise = !currentSettings.clockWise;
+        this.active = false;
+    }
 }

@@ -4,9 +4,15 @@ using UnityEngine;
 
 public class ControlFlipOption : Option
 {
-    public override void HandleBlue()
+   /* public override void HandleBlue()
     {
         currentSettings.FlipControls = !currentSettings.FlipControls;
+    }*/
+
+    public override void OnActive()
+    {
+        currentSettings.FlipControls = !currentSettings.FlipControls;
+        this.active = false;
     }
 
     /*public override void HandleRed()
