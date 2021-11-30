@@ -6,4 +6,3 @@
 - O jogador é capaz de por a 'velocidade do jogador' a zero, o que torna o jogo impossível
 - Carregar as teclas rapidamente para mudar a direção do jogador ou dos controlos dá um delay na troca (se carregar-se depressa com o rato, este alterna rapidamente bem) [continua a ser possível mudar as caracteristicas em questão] (edited)
 
-Message @RAM235F
